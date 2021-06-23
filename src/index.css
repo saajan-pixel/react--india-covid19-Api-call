@@ -2,40 +2,93 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border:0;
+  border: 0;
 }
-table{
-  border-collapse: collapse;
-  width:60%;
-  margin-top:30px;
-  margin-left: auto;
-  margin-right: auto;
- 
+body {
+  background-color: darkblue;
 }
-table th,td{
-  border:1px solid white;
+.movie {
+  background-color: indigo;
+  width: 200px;
+  margin: 50px 20px 20px 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 12px 12px 30px rgb(105, 64, 134);
+}
+.movie img {
+  width: 100%;
+}
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.movie-info {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+
+  justify-content: space-around;
+}
+.movie-info h3,
+span {
+  color: white;
+  margin: 0;
+  font-size: medium;
+  font-weight: bolder;
+}
+span {
+  margin-left: 20px;
+  background-color: rgb(169, 144, 187);
   text-align: center;
-  padding:8px;
+  font-size: 18px;
+  width: auto;
 }
-table th{
-  background-color: green;
-  color: aliceblue;
+.movie-overview {
+  background-color: whitesmoke;
+  border-radius: 2%;
+  border: 1px solid green;
+  position: absolute;
+  left: 0;
+  overflow: auto;
+  max-height: 70%;
+  right: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
 }
-table td{
-  background-color:lightgray;
-}
-h1{
-  margin-top:10px;
+.movie-overview h3 {
   text-align: center;
-  color:violet
-
+  font-size: 30px;
+}
+.movie-overview p {
+  color: indigo;
 }
 
-h1 span{
-
-  color: tomato;
-  font-weight:bolder;
+.movie:hover .movie-overview {
+  transform: translateY(0%);
 }
-table td:hover{
-  background-color: teal;
+
+.search input {
+  float: right;
+  margin-top: 20px;
+  padding: 10px;
+  margin-right: 15px;
+  border-radius: 3%;
+  width: 150px;
+}
+
+.vote {
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.vote.green {
+  color: lightgreen;
+  font-weight: bolder;
+}
+.vote.orange {
+  color: whitesmoke;
+}
+.vote.red {
+  color: rgb(171, 19, 150);
 }
